@@ -21,7 +21,3 @@ post "/notifications" do
 
   APN.push(notification)
 end
-
-get '/yop' do
-  "Hello World!"
-end
