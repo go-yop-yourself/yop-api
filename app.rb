@@ -1,7 +1,14 @@
 require 'sinatra'
 require 'sequel'
+require 'houston'
 
-DB = Sequel.connect("sqlite://db/yop.db")
+uri = if ENV["DATABASE_URL"]
+  ENV["DATABASE_URL"]
+else
+  "sqlite://db/yop.db"
+end
+
+DB = Sequel.connect(uri)
 APN = Houston::Client.development
 APN.certificate = File.read("keys/aps_development.cer")
 

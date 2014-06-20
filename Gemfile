@@ -6,6 +6,7 @@ gem "sinatra"
 gem "thin"
 gem "sequel"
 gem "houston"
+gem "pg"
 
 group :development do
   gem "sqlite3"

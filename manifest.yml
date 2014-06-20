@@ -1,3 +1,5 @@
 applications:
   - name: yop
     memory: 512mb
+    services:
+     - elephant
